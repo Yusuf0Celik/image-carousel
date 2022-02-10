@@ -41,5 +41,5 @@ function goNext() {
   }
 
   images[activeImageID].classList.remove('active');
-  images[nxtImg].classList.add('active');
+  images[nextImg].classList.add('active');
 }

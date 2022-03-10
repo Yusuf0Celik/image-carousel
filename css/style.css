@@ -8,6 +8,7 @@
 html {
   background-color: #141414;
   color: #fff;
+  height: 100%;
 }
 
 body {
@@ -15,13 +16,20 @@ body {
   color: #fff;
 }
 
+.images {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  overflow: hidden;
+  width: 1280px;
+}
+
 .image {
-  margin: 5rem auto 0 auto;
-  display: none;
+  margin: 5rem 1rem 0 1rem;
 }
 
 .image.active {
-  display: block;
+  opacity: 1;
 }
 
 .buttons {

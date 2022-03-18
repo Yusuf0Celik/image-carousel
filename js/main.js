@@ -22,25 +22,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
 const imagesJSON = 
 [
-    {
-        "image": "https://wallpapercave.com/wp/8Os5eDI.jpg"
+  {
+    "image": "https://wallpapercave.com/wp/8Os5eDI.jpg"
+  },
+  {
+      "image": "https://wallpapercave.com/wp/wp3161436.jpg"
     },
     {
-        "image": "https://wallpapercave.com/wp/wp3161436.jpg"
+      "image": "https://wallpaperaccess.com/full/2040740.jpg"
     },
     {
-        "image": "https://wallpaperaccess.com/full/2040740.jpg"
+      "image": "https://wallpaperaccess.com/full/2040736.jpg"
     },
     {
-        "image": "https://wallpaperaccess.com/full/2040736.jpg"
-    },
-    {
-        "image": "https://wallpaperaccess.com/full/1078158.jpg"
+      "image": "https://wallpaperaccess.com/full/1078158.jpg"
     }
 ];
 
+console.log(images);
+
 function goNext() {
-    for (let i = 0; i < images.length; i++) {
-        const imageShow = images[i];
-    }
+  for (let i = 0; i < images.length; i++) {
+    const imageShow = images[i];
+    
+  }
 }

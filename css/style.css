@@ -17,20 +17,25 @@ body {
 }
 
 .images {
-  margin-left: 50%;
-  transform: translateX(-50%);
-  display: flex;
   overflow: hidden;
   width: 1280px;
+  height: 50rem;
 }
 
 .image {
-  margin: 5rem 1rem 0 1rem;
-  display: none;
+  display: block;
+  margin: 5rem 0 0 0;
+  opacity: 0;
+  transition: 500ms;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
 }
 
 .image.active {
-  display: block;
+  opacity: 1;
 }
 
 .buttons {

@@ -17,25 +17,43 @@ body {
 }
 
 .images {
+  display: flex;
   overflow: hidden;
   width: 1280px;
   height: 50rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .image {
   display: block;
   margin: 5rem 0 0 0;
-  opacity: 0;
   transition: 500ms;
   position: absolute;
-  top: 0;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
+  left: -100%;
+  max-width: 1280px;
+  min-width: fit-content;
 }
 
-.image.active {
-  opacity: 1;
+.image0.active {
+  left: 0;
+}
+
+.image1.active {
+  left: 0;
+}
+
+.image2.active {
+  left: 0;
+}
+
+.image3.active {
+  left: 0;
+}
+
+.image4.active {
+  left: 0;
 }
 
 .buttons {

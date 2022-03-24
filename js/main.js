@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
   for (let i = 0; i < imagesJSON.length; i++) {
     const myImage = imagesJSON[i];
     const imgEl = document.createElement("img");
-    imgEl.classList.add("image");
+    imgEl.classList.add("image", `image${i}`);
     imgEl.src = myImage.image;
     imagesDiv.appendChild(imgEl);
     if (i === 0) {
@@ -43,14 +43,19 @@ const imagesJSON =
 
 function goPrevious() {
   for (let i = 0; i < images.length; i++) {
-    const imageShow = images[i];
-    if (imageShow.classList.contains("active")) {
+    const myImage = images[i];
+    if (myImage.classList.contains("active")) {
+      if (i === 0) {
+        i = images.length;
+      }
+
       images[i - 1].classList.add("active");
-      imageShow.classList.remove("active");
+      myImage.classList.remove("active");
+      break;
     }
     
-    if (imageShow < -1) {
-      imageShow = images.length - 1;
+    if (myImage < 0) {
+      myImage = images.length - 1;
     }
   }
 }
@@ -58,16 +63,20 @@ function goPrevious() {
 
 function goNext() {
   for (let i = 0; i < images.length; i++) {
-    const imageShow = images[i];
-    if (imageShow.classList.contains("active")) {
+    const myImage = images[i];
+    if (myImage.classList.contains("active")) {
+      if (i === images.length -1) {
+        i = -1;
+      }
+      
       images[i + 1].classList.add("active");
-      imageShow.classList.remove("active");
+      myImage.classList.remove("active");
       break;
     }
     
-    if (imageShow >= images.length) {
+    if (myImage >= images.length) {
       images[i] = 0;
     }
   }
 }
-// setInterval(goNext, 3000);
+// setInterval(goNext, 10000);

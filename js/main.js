@@ -79,4 +79,4 @@ function goNext() {
     }
   }
 }
-// setInterval(goNext, 10000);
+setInterval(goNext, 10000);
